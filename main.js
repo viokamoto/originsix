@@ -81,13 +81,6 @@ function backToTop() {
 
 window.addEventListener('scroll', function () {})
 
-/* Chamando funções de scroll*/
-
-window.addEventListener('scroll', function () {
-  changeHeaderWhenScroll()
-  backToTop()
-})
-
 /* Destacar no menu a seção ativa */
 const sections = document.querySelectorAll('main section[id]')
 
@@ -113,3 +106,11 @@ function activateMenuAtCurrentSection() {
     }
   }
 }
+
+/* Chamando funções de scroll*/
+
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
+  activateMenuAtCurrentSection()
+})
